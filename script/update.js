@@ -31,11 +31,11 @@ function addEntry(){
 }
 
 function load(){
-    var storedEntry = JSON.parse(localStorage.getItem("entry"));
-    storedEntry.reverse();
+    var entryText = JSON.parse(localStorage.getItem("entry"));
+    entryText.reverse();
     //Debugging...
-    console.log(storedEntry);
-    for(let i = 0; i < storedEntry.length; i++){
-        document.getElementById("entries").innerHTML += storedEntry[i];
+    console.log(entryText);
+    for(let i = 0; i < entryText.length; i++){
+        document.getElementById("entries").innerHTML += entryText[i];
     }   
 }

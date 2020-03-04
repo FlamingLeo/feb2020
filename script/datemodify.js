@@ -14,7 +14,7 @@ var modifiedDay = JSON.parse(localStorage.getItem("modifiedDay")) || [];
 var modifiedHour = JSON.parse(localStorage.getItem("modifiedHour")) || [];
 
 function changeValue(){    
-    // Replaces Text
+    // Gets values
     day = document.getElementById("dayDropdown").value;
     hour = document.getElementById("hourDropdown").value;
     newClass = document.getElementById("newClass").value;
@@ -36,16 +36,36 @@ function changeValue(){
     }
 }
 
+function removeValue(){
+    // Gets values
+    day = document.getElementById("dayDropdown").value;
+    hour = document.getElementById("hourDropdown").value;
+    // Gets indexes of day & hour
+    var indexDay;
+    var indexHour;
+    indexDay = modifiedDay.indexOf(day);
+    // console.log(indexDay);
+    indexHour = modifiedHour.indexOf(hour);
+    // console.log(indexHour);
+    // Removes valid value (index of day and hour must be the same, and must exist) + Local Storage
+    if(indexDay != -1 && indexHour != -1 && indexDay == indexHour){
+        modifiedDay.splice(indexDay,1);
+        localStorage.setItem("modifiedDay",JSON.stringify(modifiedDay));
+        modifiedHour.splice(indexHour,1);
+        localStorage.setItem("modifiedHour",JSON.stringify(modifiedHour));
+        modified.splice(indexDay,1);
+        localStorage.setItem("modified",JSON.stringify(modified));
+        location.reload(); // Refreshes page to see changes
+    }
+}
+
 function load(){
-    var storedClass = JSON.parse(localStorage.getItem("modified"));
-    var storedDay = JSON.parse(localStorage.getItem("modifiedDay"));
-    var storedHour = JSON.parse(localStorage.getItem("modifiedHour"));
     // Debugging...
-    console.log(storedDay);
-    console.log(storedHour);
-    console.log(storedClass);
+    console.log(modifiedDay);
+    console.log(modifiedHour);
+    console.log(modified);
     // Loads each value
-    for(i = 0; i < storedDay.length; i++){
-        document.getElementsByClassName(storedDay[i])[storedHour[i]].innerHTML = storedClass[i];
+    for(i = 0; i < modifiedDay.length; i++){
+        document.getElementsByClassName(modifiedDay[i])[modifiedHour[i]].innerHTML = modified[i];
     }
 }
