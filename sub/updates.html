@@ -19,7 +19,7 @@
     <!-- Form to add entry -->
     <div id="menu">
         <label for="manager-date">Choose a date: </label><input type="date" id="manager-date"><br>
-        <label for="manager-text">Input your text: </label><input type="text" id="manager-text"><br>
+        <label for="manager-text">Input your text: </label><textarea type="text" id="manager-text"></textarea><br>
         <button onclick="addEntry()" id="confirm">Confirm</button>
     </div>
     <!-- Entries will go here. -->
@@ -27,6 +27,6 @@
     </div>
     <!-- End Message -->
     <hr>
-    <p id="end"><i>You have reached the end.</i></p>
+    <p id="end" onclick="window.scrollTo(0,0)"><i>You have reached the end. Click here to scroll back up.</i></p>
 </body>
 </html>

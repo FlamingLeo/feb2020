@@ -27,7 +27,6 @@ body{
 #main-header a:link{
     color:white;
     text-decoration: none;
-    transition: 0.2s;
 }
 
 #main-header a:visited{
@@ -36,12 +35,12 @@ body{
 }
 
 #main-header a:hover{
-    color:rgb(98, 179, 158);
+    color:rgb(160, 250, 225);
     text-decoration: none;
 }
 
 #main-header a:active{
-    color:rgb(84, 133, 116);
+    color:rgb(125, 205, 175);
     text-decoration: none;
 }
 

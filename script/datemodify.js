@@ -20,7 +20,7 @@ function changeValue(){
     newClass = document.getElementById("newClass").value;
     // Prevents empty space or default value
     if(newClass == "" || newClass == "Hour" || newClass == "-"){
-        document.getElementById("confirm").innerHTML = "Changes have <b>not</b> been made.";
+        document.getElementById("confirm").innerHTML = "<b>Please enter a valid value.</b>";
     } else {
         document.getElementsByClassName(day)[hour].innerHTML = newClass;
         // Local Storage - Class Name
@@ -40,23 +40,17 @@ function removeValue(){
     // Gets values
     day = document.getElementById("dayDropdown").value;
     hour = document.getElementById("hourDropdown").value;
-    // Gets indexes of day & hour
-    var indexDay;
-    var indexHour;
-    indexDay = modifiedDay.indexOf(day);
-    // console.log(indexDay);
-    indexHour = modifiedHour.indexOf(hour);
-    // console.log(indexHour);
-    // Removes valid value (index of day and hour must be the same, and must exist) + Local Storage
-    if(indexDay != -1 && indexHour != -1 && indexDay == indexHour){
-        modifiedDay.splice(indexDay,1);
-        localStorage.setItem("modifiedDay",JSON.stringify(modifiedDay));
-        modifiedHour.splice(indexHour,1);
-        localStorage.setItem("modifiedHour",JSON.stringify(modifiedHour));
-        modified.splice(indexDay,1);
-        localStorage.setItem("modified",JSON.stringify(modified));
-        location.reload(); // Refreshes page to see changes
+    for(let i=0;i<modified.length;i++){
+        if(modifiedDay[i] == day && modifiedHour[i] == hour){
+            modifiedDay.splice(i,1);
+            localStorage.setItem("modifiedDay",JSON.stringify(modifiedDay));
+            modifiedHour.splice(i,1);
+            localStorage.setItem("modifiedHour",JSON.stringify(modifiedHour));
+            modified.splice(i,1);
+            localStorage.setItem("modified",JSON.stringify(modified));
+        }
     }
+    location.reload();
 }
 
 function load(){

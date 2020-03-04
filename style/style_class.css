@@ -29,7 +29,6 @@ body{
 #main-header a:link{
     color:white;
     text-decoration: none;
-    transition: 0.2s;
 }
 
 #main-header a:visited{
@@ -38,12 +37,12 @@ body{
 }
 
 #main-header a:hover{
-    color:rgb(98, 179, 158);
+    color:rgb(160, 250, 225);
     text-decoration: none;
 }
 
 #main-header a:active{
-    color:rgb(84, 133, 116);
+    color:rgb(125, 205, 175);
     text-decoration: none;
 }
 
@@ -143,6 +142,10 @@ select{
 
 #modifier:hover{
     background: linear-gradient(180deg, rgba(3,25,25,1) 0%, rgba(4,45,35,1) 100%);
+}
+
+#note{
+    font-size:14px;
 }
 
 #confirm{
