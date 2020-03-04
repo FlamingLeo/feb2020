@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../style/updates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="../script/update.js"></script>
+    <script type="text/javascript" src="../script/updatedisplay.js"></script>
+    <script type="text/javascript" src="../script/updatereset.js"></script>
     <title>Updates</title>
 </head>
-<body>
+<body onload="load()">
+    <!-- Buttons for adding/removing entries -->
+    <div id="buttons">
+        <button onclick="displayManager()" id="manager">Add New Entry</button>
+        <button onclick="clearValues()" id="manager">Erase All Entries</button>
+    </div>
+    <!-- Form to add entry -->
+    <div id="menu">
+        <label for="manager-date">Choose a date: </label><input type="date" id="manager-date"><br>
+        <label for="manager-text">Input your text: </label><input type="text" id="manager-text"><br>
+        <button onclick="addEntry()" id="confirm">Confirm</button>
+    </div>
+    <!-- Entries will go here. -->
+    <div id="entries">
+    </div>
+    <!-- End Message -->
     <p id="end"><i>You have reached the end.</i></p>
 </body>
 </html>

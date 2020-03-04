@@ -92,9 +92,9 @@
     <div class="container">
         <div id="editor-align">
             <!-- Button to display current date and change backgroundColor of days -->
-            <button id="displayer" onclick="displayDate()">Click to show today's date.</button>
+            <button id="displayer" onclick="displayDate()">Show today's date.</button>
             <p id="datedisplay"></p>
-            <button id="editor" onclick="toggleVisible()">Click here to edit a value.</button>
+            <button id="editor" onclick="toggleVisible()">Edit a value.</button>
         </div>
         <div id="menu">
             <!-- Day Dropdown Menu -->
@@ -108,7 +108,7 @@
             </select>
             <br><br>
             <!-- Hour Dropdown Menu -->
-            <label for="hourDropdown">Choose a valid hour: </label>
+            <label for="hourDropdown">Choose an hour: </label>
             <select id="hourDropdown">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -116,6 +116,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
+                <option value="7">7</option>
             </select>
             <br><br>
             <!-- The text to replace chosen value -->
@@ -123,12 +124,12 @@
             <input type="text" id="newClass">
             <br><br>
             <!-- Button to confirm change -->
-            <button onclick="changeValue()" id="modifier">Click here to modify a value.</button>
+            <button onclick="changeValue()" id="modifier">Confirm.</button>
             <p id="warning">WARNING: Modifying a value after refreshing the page will erase all previous values.</p>
             <p id="confirm"></p>
             <hr>
             <!-- Button to clear local storage -->
-            <button onclick="clearValues()" id="resetti">Click here to reset all values.</button>
+            <button onclick="clearValues()" id="resetti">Reset all values.</button>
             <br><br>
         </div>
     </div>

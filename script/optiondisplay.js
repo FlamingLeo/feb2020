@@ -7,7 +7,7 @@ function toggleVisible(){
         visible = true;
     } else {
         document.getElementById("menu").style.display = "none";
-        document.getElementById("editor").innerHTML = "Click here to edit a value.";
+        document.getElementById("editor").innerHTML = "Edit a value.";
         visible = false;
         window.scrollTo(0,0);
     }

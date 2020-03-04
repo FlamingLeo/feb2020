@@ -6,6 +6,28 @@ body{
     margin-left: 30px;
 }
 
+button{
+    background: linear-gradient(180deg, rgba(4,30,25,1) 0%, rgba(5,40,35,1) 100%);
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px black;
+}
+
+#confirm{
+    padding: 5px 10px;
+}
+
+button:hover{
+    background: linear-gradient(180deg, rgba(5,40,35,1) 0%, rgba(6,55,45,1) 100%);
+}
+
 h2{
     color: white;
 }
@@ -14,8 +36,22 @@ p{
     font-size:18px;
 }
 
+#menu{
+    display: none;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    box-shadow: 4px 4px 5px black;
+    font-size: 16px;
+}
+
 #end{
     font-size:14px;
+}
+
+#manager-text{
+    width:70%;
 }
 
 ::-webkit-scrollbar {

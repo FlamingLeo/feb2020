@@ -98,6 +98,7 @@ caption{
 button{
     background: linear-gradient(180deg, rgba(2,15,15,1) 0%, rgba(4,30,25,1) 100%);
     border: 1px solid black;
+    border-radius: 10px;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -157,6 +158,22 @@ select{
 #resetti{
     margin: 15px;
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(70,0,0,1) 100%);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: rgb(230,255,255);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(4,45,45);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(4,25,25);
 }
 
 @media(max-width:800px){
