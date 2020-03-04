@@ -139,6 +139,22 @@ body{
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: rgb(230,255,255);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(4,45,45);
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(4,25,25);
+}
+
 @media(max-width:1150px){
     #dashboard{
         width: 100%;
