@@ -9,9 +9,9 @@
 var day;
 var hour;
 var newClass;
-var modified = [];
-var modifiedDay = [];
-var modifiedHour = [];
+var modified = JSON.parse(localStorage.getItem("modified")) || [];
+var modifiedDay = JSON.parse(localStorage.getItem("modifiedDay")) || [];
+var modifiedHour = JSON.parse(localStorage.getItem("modifiedHour")) || [];
 
 function changeValue(){    
     // Replaces Text

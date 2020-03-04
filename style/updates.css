@@ -24,6 +24,15 @@ button{
     padding: 5px 10px;
 }
 
+#eraser{
+    margin: 15px;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(70,0,0,1) 100%);
+}
+
+#eraser:hover{
+    background: linear-gradient(180deg, rgba(20,0,0,1) 0%, rgba(90,0,0,1) 100%);
+}
+
 button:hover{
     background: linear-gradient(180deg, rgba(5,40,35,1) 0%, rgba(6,55,45,1) 100%);
 }

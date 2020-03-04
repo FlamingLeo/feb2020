@@ -145,11 +145,6 @@ select{
     background: linear-gradient(180deg, rgba(3,25,25,1) 0%, rgba(4,45,35,1) 100%);
 }
 
-#warning{
-    color:red;
-    font-size: 16px;
-}
-
 #confirm{
     font-size: 16px;
     font-style: italic;
@@ -158,6 +153,10 @@ select{
 #resetti{
     margin: 15px;
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(70,0,0,1) 100%);
+}
+
+#resetti:hover{
+    background: linear-gradient(180deg, rgba(20,0,0,1) 0%, rgba(90,0,0,1) 100%);
 }
 
 ::-webkit-scrollbar {
