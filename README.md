@@ -1,3 +1,3 @@
-# Changeable timetable webapp, to be used primarily by schools.
+# Changeable timetable webapp.
 
-This is a web application, made to be used for hosting easily changeable schedules, mainly by schools, using basic vanilla JS.
+This is a web application, made to be used for hosting easily changeable schedules using basic vanilla JS.
