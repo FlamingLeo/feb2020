@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="script/admin/admin.js"></script> <!-- This is only for demonstrational purposes. -->
     <title>ScheduleSwap</title>
 </head>
-<body>
+<body onload="admin()">
     <!-- Header -->
     <header id="main-header">
         <div class="container">
-            <h1><a href="index.html">ScheduleSwap</a></h1>
+            <div id="header-left">
+                <h1><a href="index.html">ScheduleSwap</a></h1>
+            </div>
+            <div id="header-right">
+                <a onclick="log()" id="login">Logout</a>
+            </div>
         </div>
     </header>
 
@@ -27,15 +33,15 @@
         </section>
         <section id="selector">
             <h2>Classes</h2>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 9MI </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 9N </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 9SW </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 10MI </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 10N </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 10SW </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 11MI </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 11N </button>
-            <button class="selector-button"onclick="window.location.href = 'sub/class.html';"> 11SW </button>
+            <button class="selector-button"onclick="window.location.href = 'sub/9mi.html';"> 9MI </button>
+            <button class="selector-button"onclick="window.location.href = 'sub/9n.html';"> 9N </button>
+            <button class="selector-button"onclick="window.location.href = 'sub/9sw.html';"> 9SW </button>
+            <button class="selector-button-disabled"> 10MI </button>
+            <button class="selector-button-disabled"> 10N </button>
+            <button class="selector-button-disabled"> 10SW </button>
+            <button class="selector-button-disabled"> 11MI </button>
+            <button class="selector-button-disabled"> 11N </button>
+            <button class="selector-button-disabled"> 11SW </button>
             <button class="selector-button-disabled"> 12MI </button>
             <button class="selector-button-disabled"> 12N </button>
             <button class="selector-button-disabled"> 12SW </button>
@@ -44,7 +50,7 @@
 
     <!-- Footer -->
     <footer id="main-footer">
-        <p><b>Copyright &copy;2020 TFR Co.</b></p>
+        <p><b>Copyright &copy;2020 VVF Co.</b></p>
         <i class="fa fa-fw fa-envelope"></i><a href="mailto:flamingleonard@gmail.com"> flamingleonard@gmail.com</a><br>
         <i class="fa fa-fw fa-phone"></i><a href="#"> +40 776 132 441</a><br>
         <a href="http://www.github.com/FlamingLeo/schedule-html-js"><i class="fa fa-fw fa-github-square"></i></a>

@@ -46,6 +46,22 @@ body{
     text-decoration: none;
 }
 
+#header-left{
+    width:70%;
+    float:left;
+}
+
+#header-right{
+    width: 18%;
+    float:right;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+    right: 0;
+    font-size: 20px;
+    cursor: default;
+}
+
 #separator{
     margin:35px;
 }

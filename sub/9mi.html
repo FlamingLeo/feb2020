@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style/style_class.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="../script/9mi/datemodify.js"></script>
+    <script type="text/javascript" src="../script/date/datedisplay.js"></script>
+    <script type="text/javascript" src="../script/9mi/datereset.js"></script>
+    <script type="text/javascript" src="../script/date/optiondisplay.js"></script>
+    <script type="text/javascript" src="../script/date/daterestrict.js"></script>
+    <script type="text/javascript" src="../script/admin/admin.js"></script> <!-- This is only for demonstrational purposes. -->
+    <script>
+        if (typeof(Storage) !== "undefined") {
+            console.log("Storage available.");
+        } else {
+            alert("No storage available.");
+        }
+    </script>
+    <title>Schedule for 9MI</title>
+</head>
+<body onload="load()">
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <div id="header-left">
+                <h1><a href="../index.html">ScheduleSwap</a></h1>
+            </div>
+            <div id="header-right">
+                <a onclick="log()" id="login">Logout</a>
+            </div>
+        </div>
+    </header>
+    <!-- Separator -->
+    <div id="separator">
+    </div>
+    <!-- Code from protoschedule-js -->
+    <!-- Table -->
+    <table>
+        <caption>Schedule</caption>
+        <tr class="dayrow">
+            <th class="1">Monday</th>
+            <th class="2">Tuesday</th>
+            <th class="3">Wednesday</th>
+            <th class="4">Thursday</th>
+            <th class="5">Friday</th>
+        </tr>
+        <tr class="row">
+            <td class="1">-</td>
+            <td class="2">-</td>
+            <td class="3">-</td>
+            <td class="4">-</td>
+            <td class="5">-</td>
+        </tr>
+        <tr class="row">
+            <td class="1">-</td>
+            <td class="2">-</td>
+            <td class="3">-</td>
+            <td class="4">-</td>
+            <td class="5">-</td>
+        </tr>
+        <tr class="row">
+            <td class="1">-</td>
+            <td class="2">-</td>
+            <td class="3">-</td>
+            <td class="4">-</td>
+            <td class="5">-</td>
+        </tr>
+        <tr class="row">
+            <td class="1">-</td>
+            <td class="2">-</td>
+            <td class="3">-</td>
+            <td class="4">-</td>
+            <td class="5">-</td>
+        </tr>
+        <tr class="row">
+            <td class="1">-</td>
+            <td class="2">-</td>
+            <td class="3">-</td>
+            <td class="4">-</td>
+            <td class="5">-</td>
+        </tr>
+        <tr class="row">
+            <td class="1">-</td>
+            <td class="2">-</td>
+            <td class="3">-</td>
+            <td class="4">-</td>
+            <td class="5">-</td>
+        </tr>
+        <tr class="row">
+            <td class="1">-</td>
+            <td class="2">-</td>
+            <td class="3">-</td>
+            <td class="4">-</td>
+            <td class="5">-</td>
+        </tr>
+    </table>
+    <div class="container">
+        <div id="editor-align">
+            <!-- Button to display current date and change backgroundColor of days -->
+            <button id="displayer" onclick="displayDate()">Show today's date.</button>
+            <p id="datedisplay"></p>
+            <button id="editor" onclick="toggleVisible()">Edit a value.</button>
+        </div>
+        <div id="menu">
+            <!-- Day Dropdown Menu -->
+            <label for="dayDropdown">Choose a day: </label>
+            <select id="dayDropdown">
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+            </select>
+            <br><br>
+            <!-- Hour Dropdown Menu -->
+            <label for="hourDropdown">Choose an hour: </label>
+            <select id="hourDropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <br><br>
+            <!-- The text to replace chosen value -->
+            <label for="newClass">Input your desired text: </label>
+            <input type="text" id="newClass" onkeypress="restrictSpace()">
+            <p id="note">Leave this field empty if you want to remove a value.</p>
+            <!-- Button to confirm change -->
+            <button onclick="changeValue()" id="modifier">Add new value.</button>
+            <button onclick="removeValue()" id="remover">Delete value.</button>
+            <p id="confirm"></p>
+            <hr>
+            <!-- Button to clear local storage -->
+            <button onclick="clearValues()" id="resetti">Reset all values.</button>
+            <br><br>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/admin/adminclass.js"></script> <!-- This is only for demonstrational purposes. -->
+</html>
