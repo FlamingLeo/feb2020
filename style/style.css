@@ -57,7 +57,7 @@ body{
     margin-bottom: 30px;
     right: 0;
     font-size: 20px;
-    cursor: default;
+    cursor: pointer;
 }
 
 #separator{
