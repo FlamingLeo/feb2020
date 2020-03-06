@@ -7,6 +7,10 @@ body{
     margin: 0;
 }
 
+span{
+    font-size:24px;
+}
+
 .container{
     width: 70%;
     margin: auto;
@@ -50,14 +54,14 @@ body{
 }
 
 #header-right{
-    width: 3%;
+    width: 18%;
     float:right;
     position: absolute;
     bottom: 0;
-    margin-bottom: 30px;
-    right: 350px;
+    margin-bottom: 40px;
+    right: 0;
     font-size: 20px;
-    cursor: pointer;
+    cursor: default;
 }
 
 #separator{
@@ -170,7 +174,7 @@ body{
     background: rgb(4,25,25);
 }
 
-@media(max-width:1000px){
+@media(max-width:900px){
     #dashboard{
         width: 100%;
         float: none;
@@ -178,6 +182,9 @@ body{
     #selector{
         width: 100%;
         float: none;
+    }
+    #main-header{
+        font-size: 20px;
     }
     #header-left{
         width: 100%;
@@ -187,9 +194,9 @@ body{
     #header-right{
         width: 100%;
         float: none;
-        text-align: center;
-        position: relative;
-        margin-bottom: 30px;
-        font-size: 16px;
+        display: none;
+    }
+    span{
+        font-size:14px;
     }
 }
