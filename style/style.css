@@ -50,12 +50,12 @@ body{
 }
 
 #header-right{
-    width: 18%;
+    width: 3%;
     float:right;
     position: absolute;
     bottom: 0;
     margin-bottom: 30px;
-    right: 0;
+    right: 350px;
     font-size: 20px;
     cursor: pointer;
 }
